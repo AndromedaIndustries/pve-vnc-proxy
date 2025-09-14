@@ -1,0 +1,11 @@
+/target
+/apps
+
+# ignore sqlite db
+database.db
+
+# Ignore env variables
+.env
+
+# Ignore temp files
+/tmp

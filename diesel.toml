@@ -1,0 +1,9 @@
+# For documentation on how to configure this file,
+# see https://diesel.rs/guides/configuring-diesel-cli
+
+[print_schema.session]
+file = "src/library/sql_lite/schema.rs"
+custom_type_derives = ["diesel::query_builder::QueryId", "Clone"]
+
+[migrations_directory]
+dir = "/home/xn4p4lm/projects/andromeda/proxmox-vnc-proxy/rust/migrations"
