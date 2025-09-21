@@ -32,8 +32,7 @@ pub async fn get_session_id(req: HttpRequest, data: web::Json<GetToken>) -> impl
 
     if let Some(auth_header) = headers.get(AUTHORIZATION) {
         if let Ok(auth_str) = auth_header.to_str() {
-            let validator_response =
-                library::jwt::validation::validator(auth_str).await;
+            let validator_response = library::jwt::validation::validator(auth_str).await;
 
             let claims = match validator_response {
                 Ok(c) => c,

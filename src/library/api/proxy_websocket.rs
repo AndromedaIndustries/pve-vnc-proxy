@@ -27,7 +27,6 @@ async fn ws_proxy(
     let (response, session, msg_stream) = actix_ws::handle(&req, payload)?;
     let get_session_id = q.get("session_id").cloned();
     let get_token = q.get("token").cloned();
-    
 
     if get_token.is_none() {
         return Ok(HttpResponse::BadRequest().body("Missing required Parameters"));
@@ -74,8 +73,7 @@ async fn ws_proxy(
 
     let url = Url::parse(&prox_url).unwrap();
 
-    let pve_ticket =
-        String::from("PVEAuthCookie=") + &session_data.proxmox_auth_cookie;
+    let pve_ticket = String::from("PVEAuthCookie=") + &session_data.proxmox_auth_cookie;
     let csrf_prevention_token = session_data.proxmox_csrf_prevention_token;
 
     let mut nonce = [0u8; 16];
@@ -128,11 +126,7 @@ async fn ws_proxy(
                         }
                     }
                     Message::Binary(b) => {
-                        if remote_write
-                            .send(TMsg::Binary(b))
-                            .await
-                            .is_err()
-                        {
+                        if remote_write.send(TMsg::Binary(b)).await.is_err() {
                             break;
                         };
                     }
