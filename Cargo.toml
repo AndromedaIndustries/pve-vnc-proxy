@@ -32,7 +32,7 @@ diesel = { version = "2", features = [
 ] }
 tungstenite = "0.28.0"
 url = "2.5.7"
-bytes = "1.10.1"
+bytes = "1.11.0"
 env_logger = "0.11.8"
 tracing = "0.1"
 tracing-subscriber = "0.3"
