@@ -31,7 +31,7 @@ diesel = { version = "2", features = [
     "returning_clauses_for_sqlite_3_35",
 ] }
 tungstenite = "0.28.0"
-url = "2.5.7"
+url = "2.5.8"
 bytes = "1.11.0"
 env_logger = "0.11.8"
 tracing = "0.1"
