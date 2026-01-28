@@ -15,7 +15,7 @@ dependencies = [
  "dotenvy",
  "env_logger",
  "futures-util",
- "jsonwebtoken",
+ "jsonwebtoken 10.3.0",
  "percent-encoding",
  "rand 0.9.2",
  "reqwest 0.13.1",
@@ -1529,6 +1529,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "jsonwebtoken"
+version = "10.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0529410abe238729a60b108898784df8984c87f6054c9c4fcacc47e4803c1ce1"
+dependencies = [
+ "base64",
+ "getrandom 0.2.16",
+ "js-sys",
+ "pem",
+ "serde",
+ "serde_json",
+ "signature",
+ "simple_asn1",
+]
+
+[[package]]
 name = "language-tags"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2774,7 +2790,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1c85bc568cbc5361f4a1bc10ea44da6ecb20721ddb5cfa67aab5dccd0ca3a819"
 dependencies = [
  "base64",
- "jsonwebtoken",
+ "jsonwebtoken 9.3.1",
  "reqwest 0.12.28",
  "serde",
  "serde_json",
